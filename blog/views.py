@@ -271,7 +271,6 @@ def single_post(request, slug):
     single_title = s_post.entry_title
     my_string = s_post.entry_text
     my_sub_id = s_post.site_sub_id
-    print("my sub id: ", my_sub_id)
     my_sentences = my_string.split('.')
     sentence_num = len(my_sentences)
     kw_str = my_sentences[sentence_num - 1]
@@ -283,14 +282,10 @@ def single_post(request, slug):
 
     str_1 = divide_string(my_string)[0]
     str_2 = divide_string(my_string)[1]
-
-    # to remove the last sentence from tha article that has keywords
-    print(str_2)
-
     stuff_for_single_post = {
         "title": single_title,
         "text_1": str_1,
-        "text_2": str_2,
+        "text_2": str_2.replace("from articlesfactory.com", ""),
         "author": single_author,
         "date": single_date,
         "rand_cta_im": get_random_cta_image,
