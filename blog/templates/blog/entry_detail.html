@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ desc }}">
+  <meta name="keywords" content="{{ tags }}">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="/media/media/favicon.png"/>
+
+  <title>Free movies and documentaries watch online</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'blog/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'blog/css/blog-home.css' %}" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://afflat3d1.com/lnk.asp?o=18627&c=918277&a=242672&k=B97D03D349CE4FE1BE27D635A16AD24B&l=19818" target="_blank">Russian dolls are so full of themselves.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://afflat3d1.com/lnk.asp?o=7527&c=918277&a=242672&k=956D04E486409DA8ED5528F3448FB86F&l=6239&s1={{ sub_id }}" target="_blank"> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://afflat3d1.com/lnk.asp?o=10721&c=918277&a=242672&k=18DBF0EF0820E9FDB52660B31C464213&l=10603&s1={{ sub_id }}" target="_blank"> Giveaways</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="https://puppy-verse.herokuapp.com/gallery/" target="_blank"> Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+        <a href="{% url 'blog-home'  %}">Home</a>
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4">
+          <div class="card-body">
+            <h1 class="card-title">{{ title }}</h1>
+              <a href="https://afflat3d1.com/lnk.asp?o=9075&c=918277&a=242672&k=FF87DECAA57BB0FAE70615CF5958FFE0&l=8504&s1={{ sub_id }}" target="_blank">
+                   <img class="card-img-top mx-auto d-block" src="{{ rand_cta_im }}" alt="{{ tags }}" >
+              </a>
+
+            <p class="card-text">{{ text_1|safe|linebreaks }}</p>
+            <br>
+            <a href="https://afflat3d1.com/lnk.asp?o=9075&c=918277&a=242672&k=FF87DECAA57BB0FAE70615CF5958FFE0&l=8504&s1={{ sub_id }}" target="_blank">
+                   <img class="card-img-top mx-auto d-block" src="/media/media/{{ rand_im_1 }}" alt="{{ tags }}" >
+            </a>
+            <br>
+            <p class="card-text">{{ text_2|safe|linebreaks }}</p>
+            <br>
+            <a href="https://afflat3d1.com/lnk.asp?o=9075&c=918277&a=242672&k=FF87DECAA57BB0FAE70615CF5958FFE0&l=8504&s1={{ sub_id }}" target="_blank">
+                   <img class="card-img-top mx-auto d-block" src="/media/media/{{ rand_im_2 }}" alt="{{ tags }}" >
+            </a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ date }} by
+            <span class= "text-info mr-2">{{ author }}</span>
+          </div>
+        </div>
+
+      </div>
+           <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+                <!-- Side Widget -->
+      <div class="card my-5">
+          <h2 class="card-header text-center">HOT HEADLINES</h2>
+            <ul class="collection">
+             {% for single_thing in sidebar_things %}
+
+              <li class="collection-item avatar" href="{{ single_thing.2 }}">
+                <img src="/media/media/{{ single_thing.1}}" alt="{{ tags }}" class="circle" >
+                <a href="{{ single_thing.2  }}">{{ single_thing.0 }}  <br>
+
+                </a>
+              </li>
+             {% endfor %}
+            </ul>
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark" >
+    <div class="container">
+      <p class="m-0 text-center text-white" >Copyright 2020 - 2030 &copy; The Pirate King </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'blog/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>

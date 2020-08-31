@@ -1,0 +1,22 @@
+{% extends 'blog/home-page.html' %}
+{% block content %}
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <div class="card mb-4 mt-4">
+          <div class="card-header">
+              create blog post
+          </div>
+          <div class="card-body">
+              <form method="POST">
+                  {% csrf_token %}
+                  {{form.as_p}}
+                  <button type="submit" class="btn btn-primary">Post Entry </button>
+              </form>
+
+          </div>
+        </div>
+
+      </div>
+
+{% endblock content %}

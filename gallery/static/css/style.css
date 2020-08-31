@@ -1,0 +1,18 @@
+.card {
+    height: 700px; /* Your height here */
+    overflow: hidden;
+}
+
+.card-image {
+    height: 600px; /* Your height here */
+    overflow: hidden;
+}
+
+.material-icons{
+    font-family: 'Material Icons' !important;
+}
+
+
+.ilike-blue-container {
+    @extend .blue, .lighten-4;
+}

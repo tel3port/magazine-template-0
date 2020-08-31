@@ -1,0 +1,47 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+    <h2 style="text-align: center">{{ search | title }}</h2>
+    <div class="row">
+        {% for post in final_postings %}
+            <div class="col s4">
+                <div class="card"  >
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="/media/media/{{ post.0 }}" alt="{{ post.2 }}">
+                    </div>
+                    <div class="card-content">
+                      <p class="card-title activator grey-text text-darken-4"><a  href="https://afflat3d1.com/lnk.asp?o=7527&c=918277&a=242672&k=956D04E486409DA8ED5528F3448FB86F&l=6239">{{ post.4 }}</a></p>
+
+<!--                      <span class="card-title activator grey-text text-darken-4">{{ post.1 }}<i class="material-icons right">more_vert</i></span>-->
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">{{ post.1 }}<i class="material-icons right">close</i></span>
+                      <p> {{ post.1 }} {{ post.2 }} {{ post.3 }}</p>
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+        {% if users.has_other_pages %}
+          <ul class="pagination">
+            {% if users.has_previous %}
+              <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in users.paginator.page_range %}
+              {% if users.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if users.has_next %}
+              <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        {% endif %}
+
+    </div>
+{% endblock content %}

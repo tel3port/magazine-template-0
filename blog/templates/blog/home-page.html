@@ -1,0 +1,297 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ desc }}">
+  <meta name="keywords" content="{{ tags }}">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href="/media/media/favicon.png"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Info for fun and profit</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'blog/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'blog/css/style.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="https://afflat3d1.com/lnk.asp?o=18627&c=918277&a=242672&k=B97D03D349CE4FE1BE27D635A16AD24B&l=19818" target="_blank">
+          <strong class="blue-text">TPK</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="https://afflat3d1.com/lnk.asp?o=10721&c=918277&a=242672&k=18DBF0EF0820E9FDB52660B31C464213&l=10603" target="_blank">About US</a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="https://afflat3d1.com/lnk.asp?o=10721&c=918277&a=242672&k=18DBF0EF0820E9FDB52660B31C464213&l=10603" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://afflat3d1.com/lnk.asp?o=10721&c=918277&a=242672&k=18DBF0EF0820E9FDB52660B31C464213&l=10603" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="https://afflat3d1.com/lnk.asp?o=7527&c=918277&a=242672&k=956D04E486409DA8ED5528F3448FB86F&l=6239"
+                target="_blank">SHOP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/gallery" target="_blank">GALLERY</a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!--Main Navigation-->
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5 pt-5">
+    <div class="container">
+
+      <!--Section: Jumbotron-->
+      <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+
+        <!-- Content -->
+        <div class="card-body text-white text-center py-5 px-5 my-5">
+
+          <h1 class="mb-4">
+            <strong>Increase your chances for a scholarship</strong>
+          </h1>
+          <p>
+            <strong>GET PAID TO STUDY</strong>
+          </p>
+          <p class="mb-4">
+            <strong>You can register for hundreds of scholarships with a single application. Scholarship Owl makes applying for scholarships faster and easier.</strong>
+          </p>
+          <a target="_blank" href="https://afflat3d1.com/lnk.asp?o=9075&c=918277&a=242672&k=C37A71637676BC2EA48BC35ED207949E&l=8504&s1=blog_template_!" class="btn btn-outline-white btn-lg">Start
+            applying NOW!
+            <i class="fas fa-graduation-cap ml-2"></i>
+          </a>
+
+        </div>
+        <!-- Content -->
+      </section>
+      <!--Section: Jumbotron-->
+
+      <hr class="my-5">
+
+      <!--Section: Magazine v.1-->
+      <section class="wow fadeIn">
+
+        <!--Section heading-->
+        <h2 class="h1 text-center my-5 font-weight-bold">Today's NewsFeed</h2>
+
+        <!--Grid row-->
+        <div class="row text-left">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <!--Image-->
+            <div class="view overlay rounded z-depth-1-half mb-3">
+              <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="img-fluid" alt="Sample post image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--/Featured news-->
+
+          {% for entry in blog_entries %}
+              <hr>
+
+          <!--Small news-->
+              <div class="row">
+                <div class="col-md-3">
+
+                  <!--Image-->
+                  <div class="view overlay rounded z-depth-1">
+                    <img src="media/media/{{ rand_im }}" class="img-fluid" alt="Minor sample post image">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                </div>
+
+                <!--Excerpt-->
+                <div class="col-md-9">
+                  <p class="dark-grey-text" >
+                    <strong>{{ entry.entry_title }}</strong>
+                  </p>
+                  <a href="{% url 'entry-detail' entry.slug %}">{{ entry.entry_tags }}
+
+                    <i class="fas fa-angle-right float-right"></i>
+                  </a>
+                </div>
+
+              </div>
+              <!--/Small news-->
+
+          {% endfor %}
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <!--Image-->
+            <div class="view overlay rounded z-depth-1-half mb-3">
+              <img src="https://mdbootstrap.com/img/Photos/Others/images/32.jpg" class="img-fluid" alt="Sample post image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--/Featured news-->
+
+          {% for entry in blog_entries %}
+              <hr>
+
+          <!--Small news-->
+              <div class="row">
+                <div class="col-md-3">
+
+                  <!--Image-->
+                  <div class="view overlay rounded z-depth-1">
+                    <img src="media/media/{{ rand_im }}" class="img-fluid" alt="Minor sample post image">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                </div>
+
+                <!--Excerpt-->
+                <div class="col-md-9">
+                  <p class="dark-grey-text" >
+                    <strong>{{ entry.entry_title }}</strong>
+                  </p>
+                  <a href="{% url 'entry-detail' entry.slug %}">{{ entry.entry_tags }}
+
+                    <i class="fas fa-angle-right float-right"></i>
+                  </a>
+                </div>
+
+              </div>
+              <!--/Small news-->
+
+          {% endfor %}
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+        {% if is_paginated %}
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+              {% if page_obj.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&larr; Previous Page</a>
+              </li>
+               {% endif %}
+
+               {% if page_obj.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next Page &rarr;</a>
+              </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+      </section>
+      <!--/Section: Magazine v.1-->
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://afflat3d1.com/lnk.asp?o=18099&c=918277&a=242672&k=89F4A996358DADE546AA2BF166C9A7F9&l=19340" target="_blank"
+        role="button">Download games
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://afflat3d1.com/lnk.asp?o=18099&c=918277&a=242672&k=89F4A996358DADE546AA2BF166C9A7F9&l=19340" target="_blank" role="button">Start
+        free STUFF
+        <i class="fas fa-graduation-cap ml-2"></i>
+      </a>
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="https://afflat3d1.com/lnk.asp?o=18174&c=918277&a=242672&k=29DA121E59E0456E7F1B9D705D276327&l=19429" target="_blank"> The Pirate King </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{% static 'blog/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'blog/js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'blog/js/mdb.min.js' %}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% for i in loop_times %}
+        <hr>
+
+    <!--Small news-->
+        <div class="row">
+          <div class="col-md-3">
+
+            <!--Image-->
+            <div class="view overlay rounded z-depth-1">
+              <img src="https://mdbootstrap.com/img/Photos/Others/photo8.jpg" class="img-fluid" alt="Minor sample post image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          </div>
+
+          <!--Excerpt-->
+          <div class="col-md-9">
+            <p class="dark-grey-text">
+              <strong>{{ r_title }}</strong>
+            </p>
+            <a>{{ r_tags }}
+                href="{% url 'entry-detail' entry.slug %}"
+              <i class="fas fa-angle-right float-right"></i>
+            </a>
+          </div>
+
+        </div>
+        <!--/Small news-->
+
+    {% endfor %}
+
+</body>
+</html>
